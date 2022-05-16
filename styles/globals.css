@@ -1,3 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.light {
+  --color-bg-primary: #fffffe;
+  --color-bg-secondary: #edf2f7;
+  --color-text-primary: #181818;
+  --color-text-secondary: #4fc4cf;
+  --color-text-accent: #fbdd74;
+  }
+ .dark {
+    --color-bg-primary: #2d3748;
+    --color-bg-secondary: #283141;
+    --color-text-primary: #f7fafc;
+    --color-text-secondary: #e2e8f0;
+    --color-text-accent: #81e6d9;
+  }
+
+@layer base {
+  h1 {
+    @apply font-arya;
+  }
+  p {
+    @apply font-voces;
+  }
+}
+
+@layer components {
+  
+}
+
+.root,
+:root {
+  @apply light
+}
+
 html,
 body {
   padding: 0;
