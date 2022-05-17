@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 .light {
   --color-bg-primary: #fffffe;
   --color-bg-secondary: #edf2f7;
@@ -22,8 +21,17 @@
   h1 {
     @apply font-arya;
   }
-  p {
+  /* p {
     @apply font-voces;
+  } */
+  :root {
+      --color-text-base: #ffffff;
+      --color-text-muted: #c7d2f3;
+      --color-text-inverted: #4f56e5;
+      --color-fill: #4338ca;
+      --color-button-accent: #ffffff;
+      --color-button-accent-hover: #eef2ff;
+      --color-button-muted: #6366f1;
   }
 }
 
@@ -31,10 +39,10 @@
   
 }
 
-.root,
+/* .root,
 :root {
   @apply light
-}
+} */
 
 html,
 body {

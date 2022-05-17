@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 // Styles & Images
-import styles from '../styles/Home.module.css'
+// import styles from '../styles/Home.module.css'
 import profilePic from '../public/images/me.jpg'
 // External
 import TypewriterComponent from 'typewriter-effect'
@@ -72,7 +72,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
           >
             <div className='light flex flex-col text-primary'>
-              <h1 className='text-6xl'>hi, i'm dyl</h1>
+              <h1 className='text-6xl text-skin-base'>hi, i'm dyl</h1>
               {/* <span className=''>subtitle</span> */}
             </div>
             <div class="image-container w-48 rounded-full overflow-hidden object-contain">
@@ -95,7 +95,7 @@ export default function Home() {
           </motion.div>
 
           <motion.div
-            className="flex flex-col justify-center items-center text-5xl md:text-3xl light"
+            className="flex flex-col justify-center items-center text-5xl md:text-5xl 2xl:text-6xl text-skin-base"
             variants={section}
             transition={{ duration: 0.8 }}
           >
@@ -113,7 +113,7 @@ export default function Home() {
           </motion.div>
 
           <motion.div
-            className='featured-work flex flex-col items-center gap-8'
+            className='featured-work flex flex-col items-center gap-12 p-8 text-skin-base'
             variants={section}
             transition={{ duration: 0.8 }}
           >
@@ -122,7 +122,7 @@ export default function Home() {
               <WorkCard />
               <WorkCard />
             </div>
-            <button className='flex items-center gap-4 bg-black text-white rounded-md p-4'>
+            <button className='flex items-center gap-4 bg-skin-button-accent hover:bg-skin-button-accent-hover text-skin-inverted rounded-md p-4'>
               <Link href='/work'>
                 all my work
               </Link>
@@ -131,7 +131,7 @@ export default function Home() {
           </motion.div>
 
           <motion.div
-            className=''
+            className='text-skin-base'
             variants={section}
             transition={{ duration: 0.8 }}
           >

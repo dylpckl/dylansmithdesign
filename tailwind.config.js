@@ -7,15 +7,26 @@ module.exports = {
   theme: {
     extend: {
       backgroundColor: {
-        primary: 'var(--color-bg-primary)',
-        secondary: 'var(--color-bg-secondary)',
+        skin: {
+          fill: 'var(--color-fill)',
+          'button-accent': 'var(--color-button-accent)',
+          'button-accent-hover': 'var(--color-button-accent-hover)',
+          'button-muted': 'var(--color-button-muted)',
+        },
+      },
+      gradientColorStops: {
+        skin: {
+          hue: 'var(--color-fill)',
+        },
       },
       textColor: {
-        accent: 'var(--color-text-accent)',
-        primary: 'var(--color-text-primary)',
-        secondary: 'var(--color-text-secondary)',
+        skin: {
+          base: 'var(--color-text-base)',
+          muted: 'var(--color-text-muted)',
+          inverted: 'var(--color-text-inverted)',
+        },
       },
-      fontFamily: { 
+      fontFamily: {
         'josefin': ['Josefin Sans', 'sans-serif'],
         'arya': ['Arya', 'sans-serif'],
         'voces': ['Voces', 'cursive']

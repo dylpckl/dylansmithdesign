@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '../styles/Home.module.css'
+// import styles from '../styles/Home.module.css'
 import Image from 'next/image'
 
 // .footer {
@@ -20,7 +20,7 @@ import Image from 'next/image'
 
 function footer() {
     return (
-        <footer className='flex flex-1 p-8 justify-center items-center'>
+        <footer className='flex flex-1 p-8 justify-center items-center text-skin-base'>
             <a
                 className='flex justify-center items-center grow'
                 href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
