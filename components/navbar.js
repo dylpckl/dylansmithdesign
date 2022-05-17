@@ -15,7 +15,7 @@ function navbar() {
                     <li className='list-none uppercase cursor-pointer'>work</li>
                 </Link>
                 <li className='list-none uppercase'>//</li>
-                <Link href='/posts'>
+                <Link href='/post/'>
                     <li className='list-none uppercase cursor-pointer'>posts</li>
                 </Link>
                 <li className='list-none uppercase'>//</li>
