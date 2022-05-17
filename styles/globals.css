@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.light {
+/* .light {
   --color-bg-primary: #fffffe;
   --color-bg-secondary: #edf2f7;
   --color-text-primary: #181818;
@@ -15,11 +15,11 @@
     --color-text-primary: #f7fafc;
     --color-text-secondary: #e2e8f0;
     --color-text-accent: #81e6d9;
-  }
+  } */
 
 @layer base {
   h1 {
-    @apply font-arya;
+    @apply text-6xl font-arya;
   }
   /* p {
     @apply font-voces;
@@ -35,16 +35,7 @@
   }
 }
 
-@layer components {
-  
-}
-
-/* .root,
-:root {
-  @apply light
-} */
-
-html,
+/* html,
 body {
   padding: 0;
   margin: 0;
@@ -59,4 +50,4 @@ a {
 
 * {
   box-sizing: border-box;
-}
+} */

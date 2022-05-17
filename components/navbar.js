@@ -6,7 +6,7 @@ function navbar() {
     const [darkMode, setDarkMode] = useState(false);
 
     return (
-        <nav className='flex py-8 gap-12 justify-between'>
+        <nav className='flex py-8 gap-12 justify-between text-skin-base'>
             <div class="left flex gap-12 items-center">
                 <Link href='/'>
                     <li className='mr-8 list-none cursor-pointer'>logo</li>
@@ -32,18 +32,15 @@ function navbar() {
                         />
                     </li>
                 </a>
-                <Link href='/'>
-                    <li className='list-none uppercase'>
-                        <button
-                            onClick={() => setDarkMode(!darkMode)}
-                            className='flex w-10 h-10 justify-center items-center bg-black rounded-md'>
-                            <SunIcon
-                                className='h-6 text-pink-400'
-                            />
-                        </button>
-                    </li>
-                </Link>
-
+                <li className='list-none uppercase'>
+                    <button
+                        onClick={() => setDarkMode(!darkMode)}
+                        className='flex w-10 h-10 justify-center items-center bg-black rounded-md'>
+                        <SunIcon
+                            className='h-6 text-pink-400'
+                        />
+                    </button>
+                </li>
             </div>
         </nav>
     )
