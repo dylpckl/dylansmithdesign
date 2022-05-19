@@ -9,6 +9,12 @@ export default {
       type: 'string',
     },
     {
+      name: 'summary',
+      title: 'Summary',
+      type: 'text',
+      rows: 3,
+    },
+    {
       name: 'slug',
       title: 'Slug',
       type: 'slug',

@@ -28,10 +28,16 @@
       --color-text-base: #ffffff;
       --color-text-muted: #c7d2f3;
       --color-text-inverted: #4f56e5;
+      --color-text-accent: #52C2B1;
+      --color-text-light: #F472B6;
+      --color-text-dark: #EBDFFF;
       --color-fill: #4338ca;
       --color-button-accent: #ffffff;
       --color-button-accent-hover: #eef2ff;
       --color-button-muted: #6366f1;
+      --color-bg-light: #EBDFFF;
+      --color-bg-dark: #2E3E4E;
+      --color-bg-primary: #F472B6;
   }
 }
 

@@ -29,7 +29,7 @@ const ptComponents = {
   }
 }
 
-const Post = ({ post }) => {
+const Work = ({ work }) => {
   const { title = 'Missing title', name = 'Missing name', categories, authorImage, body = [] } = post
   return (
     <article>
@@ -80,10 +80,10 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
   // It's important to default the slug so that it doesn't return "undefined"
   const { slug = "" } = context.params
-  const post = await client.fetch(query, { slug })
+  const work = await client.fetch(query, { slug })
   return {
     props: {
-      post
+      work
     }
   }
 }

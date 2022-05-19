@@ -12,6 +12,9 @@ module.exports = {
           'button-accent': 'var(--color-button-accent)',
           'button-accent-hover': 'var(--color-button-accent-hover)',
           'button-muted': 'var(--color-button-muted)',
+          'bg-light': 'var(--color-bg-light)',
+          'bg-dark': 'var(--color-bg-dark)',
+          'bg-primary': 'var(--color-bg-primary)',
         },
       },
       gradientColorStops: {
@@ -24,6 +27,9 @@ module.exports = {
           base: 'var(--color-text-base)',
           muted: 'var(--color-text-muted)',
           inverted: 'var(--color-text-inverted)',
+          accent: 'var(--color-text-accent)',
+          light: 'var(--color-text-light)',
+          dark: 'var(--color-text-dark)',
         },
       },
       fontFamily: {

@@ -16,12 +16,18 @@ const postFields = `
   _id,
   name,
   title,
+  body,
   'date': publishedAt,
-  excerpt,
+  mainImage,
+  summary,
+  'categories': categories[]->title,
   'slug': slug.current,
   'coverImage': mainImage,
   'author': author->{name, 'picture': image.asset->url},
 `
+// 'coverImage': mainImage,
+// 'coverImage': mainImage->{'imageUrl': image.asset->url},
+// 'coverImage': mainImage.asset->url,
 
 const getClient = (preview) => (preview ? previewClient : client)
 

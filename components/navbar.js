@@ -1,17 +1,19 @@
 import { React, useState } from 'react'
 import Link from 'next/link'
 import { CodeIcon, SunIcon } from '@heroicons/react/outline'
+import userDarkMode from '../utils/userDarkMode'
+import DarkModeSwitch from './darkModeSwitch';
 
 function navbar() {
     const [darkMode, setDarkMode] = useState(false);
 
     return (
-        <nav className='flex py-8 gap-12 justify-between text-skin-base'>
+        <nav className='flex py-6 gap-12 justify-between text-skin-base sticky top-0 backdrop-blur-md'>
             <div class="left flex gap-12 items-center">
                 <Link href='/'>
                     <li className='mr-8 list-none cursor-pointer'>logo</li>
                 </Link>
-                <Link href="/work">
+                <Link href="/work/">
                     <li className='list-none uppercase cursor-pointer'>work</li>
                 </Link>
                 <li className='list-none uppercase'>//</li>
@@ -33,13 +35,14 @@ function navbar() {
                     </li>
                 </a>
                 <li className='list-none uppercase'>
-                    <button
+                    <DarkModeSwitch />
+                    {/* <button
                         onClick={() => setDarkMode(!darkMode)}
                         className='flex w-10 h-10 justify-center items-center bg-black rounded-md'>
                         <SunIcon
                             className='h-6 text-pink-400'
                         />
-                    </button>
+                    </button> */}
                 </li>
             </div>
         </nav>

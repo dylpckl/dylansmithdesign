@@ -31,11 +31,11 @@ const listItem = {
   visible: { opacity: 1 }
 }
 
-const Index = ({ posts }) => {
+const postIndex = ({ posts }) => {
   return (
     <Section>
       <div className='flex flex-col'>
-        <h1 className='mb-8'>my posts</h1>
+        <h1 className='mb-8'>blog posts</h1>
         {/* <div class="posts-container flex p-8 gap-8"> */}
 
 
@@ -105,4 +105,4 @@ export async function getStaticProps() {
   }
 }
 
-export default Index
+export default postIndex

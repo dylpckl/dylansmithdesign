@@ -1,5 +1,4 @@
 // Next.js
-import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 // Styles & Images
@@ -19,7 +18,7 @@ import HeroPost from '../components/hero-post'
 import MoreStories from '../components/more-stories'
 import { getAllPostsForHome, getPostAndMorePosts } from './api/api'
 
-export default function Home( {allPosts, preview }) {
+export default function Home({ allPosts, preview }) {
 
   const container = {
     visible: {
@@ -46,9 +45,9 @@ export default function Home( {allPosts, preview }) {
     // initial={{ y: 10, opacity: 0 }}
     // animate={{ y: 0, opacity: 1 }}
   }
-  
+
   const heroPost = allPosts[0]
-  const morePosts = allPosts.slice(1)
+  const morePosts = allPosts.slice(0, 3)
 
   return (
 
@@ -70,30 +69,47 @@ export default function Home( {allPosts, preview }) {
           animate="visible"
           variants={container}
           transition={{ duration: 0.8 }}
-          className={`flex flex-col justify-center gap-10 ${darkMode && 'dark'}`}
+          className={`flex flex-col justify-center gap-8 ${darkMode && 'dark'}`}
         >
-          <motion.div
-            className='flex justify-center items-center gap-12'
+          {/* <motion.div
+            className='flex flex-col justify-center items-center mt-8'
             variants={section}
             transition={{ duration: 0.8 }}
-          >
-            <div className='light flex flex-col text-primary'>
-              <h1 className='text-6xl text-skin-base'>hi, i'm dyl</h1>
-              {/* <span className=''>subtitle</span> */}
+          > */}
+          <Section>
+            <div class="left flex items-center gap-12 xl:gap-16">
+              <div class="image-container w-40 rounded-full overflow-hidden object-contain mr-8 border-2 border-black">
+                <Image
+                  src={profilePic}
+                  alt="Picture of Dylan Smith"
+                  layout='responsive'
+                  objectFit='cover'
+                  width={'200px'}
+                  height={'200px'}
+                />
+              </div>
+              <div className='light flex flex-col text-primary'>
+                <h1 className='text-4xl text-skin-base'>Dylan Smith</h1>
+                {/* <span className=''>subtitle</span> */}
+                <div className='right text-3xl flex flex-col'>
+                  <TypewriterComponent
+                    options={{
+                      strings: ['', 'front-end developer', 'ui/uix designer', 'logo designer', 'husband', 'dad'],
+                      autoStart: true,
+                      loop: true,
+                      delay: 'natural',
+                      deleteSpeed: 'natural'
+                    }}
+                  />
+                  <span>and lover of all things web related</span>
+                  <span>based in new york</span>
+                </div>
+              </div>
             </div>
-            <div class="image-container w-48 rounded-full overflow-hidden object-contain">
-              <Image
-                src={profilePic}
-                alt="Picture of Dylan Smith"
-                layout='responsive'
-                objectFit='contain'
-              // width={'200px'}
-              // height={'200px'}
-              />
-            </div>
-          </motion.div>
+          </Section>
+          {/* </motion.div> */}
 
-          <motion.div
+          {/* <motion.div
             className="flex flex-col justify-center items-center text-5xl md:text-5xl 2xl:text-6xl text-skin-base"
             variants={section}
             transition={{ duration: 0.8 }}
@@ -109,48 +125,57 @@ export default function Home( {allPosts, preview }) {
             />
             <span>and lover of all things web related</span>
             <span>based in new york</span>
-          </motion.div>
+          </motion.div> */}
 
-          <motion.div
+
+          <Section>
+            {/* <motion.div
             className='featured-work flex flex-col items-center gap-12 p-8 text-skin-base'
             variants={section}
             transition={{ duration: 0.8 }}
-          >
-            <h3 className='text-3xl'>recent stuff</h3>
-            <div class="workCard-container flex gap-8">
-
-{heroPost && (
-  <HeroPost
+          > */}
+            {/* <h3 className='text-3xl'>recent stuff</h3> */}
+            {/* {heroPost && (
+              <HeroPost
                 title={heroPost.title}
-                coverImage={HeroPost.coverImage}
+                coverImage={heroPost.coverImage}
                 date={heroPost.date}
                 author={heroPost.author}
                 slug={heroPost.slug}
-                excerpt={heroPost.excerpt}
+                summary={heroPost.summary}
               />
-)}
-{morePosts.length > 0 && <MoreStories posts={morePosts} />
-}
-              
+            )} */}
+            {morePosts.length > 0 && <MoreStories posts={morePosts} />
+            }
 
-
-
-            </div>
-            <button className='flex items-center gap-4 bg-skin-button-accent hover:bg-skin-button-accent-hover text-skin-inverted rounded-md p-4'>
+            {/* <button className='flex items-center gap-4 bg-skin-button-accent hover:bg-skin-button-accent-hover text-skin-inverted rounded-md p-4'>
               <Link href='/work'>
                 all my work
               </Link>
               <ChevronDoubleRightIcon className='w-6' />
-            </button>
-          </motion.div>
+            </button> */}
+            <div className='mt-8'>
+              <Button
+                bgColor='black'
+                textColor='white'
+              >
+                <Link href='/work'>
+                  all my work
+                </Link>
+                <ChevronDoubleRightIcon className='w-6' />
+              </Button>
+            </div>
 
-          <motion.div
+            {/* </motion.div> */}
+          </Section>
+
+          {/* <motion.div
             className='text-skin-base'
             variants={section}
             transition={{ duration: 0.8 }}
           >
             follow me around the web
-          </motion.div>
+          </motion.div> */}
 
         </motion.div>
       </main >
