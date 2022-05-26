@@ -40,19 +40,20 @@ export default function DarkModeSwitch() {
     }
 
     return (
-        <div onClick={toggleSwitch} className={`flex-start flex h-10 w-14 rounded-full bg-zinc-100 p-[5px] shadow-inner hover:cursor-pointer dark:bg-zinc-700 ${isOn && 'place-content-end'}`}>
-
+        // <div onClick={toggleSwitch} className={`flex-start flex items-center h-10 w-10 rounded-full bg-zinc-100 p-[5px] shadow-inner hover:cursor-pointer dark:bg-zinc-700 ${isOn && 'place-content-end'}`}>
+        <motion.div
+            className="flex w-8 h-8 items-center justify-center hover:cursor-pointer rounded-full bg-black/90"
+            layout
+            transition={spring}
+            onClick={toggleSwitch}
+        >
             <motion.div
-                className="flex w-8 h-8 items-center justify-center rounded-full bg-black/90"
-                layout
-                transition={spring}
+                whileTap={{ rotate: 360 }}
             >
-                <motion.div whileTap={{ rotate: 360 }}>
-                    {isOn ? (<MoonIcon className="h-6 w-6 text-slate-200" />) : (<SunIcon className="h-6 w-6 text-yellow-300" />)}
-                </motion.div>
-
+                {isOn ? (<MoonIcon className="h-6 w-6 text-skin-icon-secondary" />) : (<SunIcon className="h-6 w-6 text-skin-icon-highlight" />)}
             </motion.div>
+        </motion.div>
 
-        </div>
+        // </div>
     )
 }

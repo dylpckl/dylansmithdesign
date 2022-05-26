@@ -2,11 +2,8 @@ import groq from 'groq'
 import ImageUrlBuilder from '@sanity/image-url'
 import { PortableText } from '@portabletext/react'
 import client from '../../client'
-import Avatar from '../../components/avatar'
-import { useReadingTime } from 'react-reading-time-estimator'
-import { useRef } from 'react'
 import Section from '../../components/section'
-import categoriesList from '../../components/categoriesList'
+import Avatar from '../../components/avatar'
 
 function urlFor(source) {
   return ImageUrlBuilder(client).image(source)
@@ -29,7 +26,7 @@ const ptComponents = {
       )
     },
     span: ({ children }) => <span className="text-lg">{children}</span>,
-    break: ({ children }) => <hr className='lineBreak'/>,
+    break: ({ children }) => <hr className='lineBreak' />,
   },
 
   list: {
@@ -54,24 +51,8 @@ const ptComponents = {
   }
 }
 
-// const {
-//   text,
-//   minutes,
-//   words,
-//   time,
-// } = useReadingTime(text);
-
-// function readingTime() {
-//   const text = useRef(article)
-//   const wpm = 225;
-//   const words = text.trim().split(/\s+/).length;
-//   const time = Math.ceil(words / wpm);
-//   document.getElementById("time").innerText = time;
-// }
-// readingTime();
-
-const Post = ({ post }) => {
-  const { title, name, categories, authorImage, coverImage, body = [] } = post
+const Work = ({ work }) => {
+  const { title, name, categories, authorImage, coverImage, body = [] } = work
   return (
     <article className='py-16 px-32 flex flex-col gap-4'>
 
@@ -134,7 +115,7 @@ const Post = ({ post }) => {
   )
 }
 
-const query = groq`*[_type == "post" && slug.current == $slug][0]{
+const query = groq`*[_type == "project" && slug.current == $slug][0]{
   title,
   "name": author->name,
   "categories": categories[]->title,
@@ -143,11 +124,9 @@ const query = groq`*[_type == "post" && slug.current == $slug][0]{
   'coverImage': mainImage.asset->url,
 }`
 
-// "author": author->{name, 'picture': image.asset->url},
-
 export async function getStaticPaths() {
   const paths = await client.fetch(
-    groq`*[_type == "post" && defined(slug.current)][].slug.current`
+    groq`*[_type == "project" && defined(slug.current)][].slug.current`
   )
 
   return {
@@ -159,11 +138,11 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
   // It's important to default the slug so that it doesn't return "undefined"
   const { slug = "" } = context.params
-  const post = await client.fetch(query, { slug })
+  const work = await client.fetch(query, { slug })
   return {
     props: {
-      post
+      work
     }
   }
 }
-export default Post
+export default Work

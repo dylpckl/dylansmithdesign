@@ -8,7 +8,7 @@ import profilePic from '../public/images/me.jpg'
 import TypewriterComponent from 'typewriter-effect'
 import { motion } from "framer-motion"
 // Components
-import WorkCard from '../components/workCard'
+// import WorkCard from '../components/workCard'
 import Section from '../components/section'
 import Button from '../components/button'
 import { ChevronDoubleRightIcon, SunIcon } from '@heroicons/react/outline'
@@ -17,6 +17,7 @@ import React, { useState } from 'react'
 import HeroPost from '../components/hero-post'
 import MoreStories from '../components/more-stories'
 import { getAllPostsForHome, getPostAndMorePosts } from './api/api'
+import ProjectCard from '../components/ProjectCard'
 
 export default function Home({ allPosts, preview }) {
 
@@ -69,29 +70,35 @@ export default function Home({ allPosts, preview }) {
           animate="visible"
           variants={container}
           transition={{ duration: 0.8 }}
-          className={`flex flex-col justify-center gap-8 ${darkMode && 'dark'}`}
+          className='flex flex-col justify-center gap-24'
+        // className={`flex flex-col justify-center gap-8 ${darkMode && 'dark'}`}
         >
           {/* <motion.div
             className='flex flex-col justify-center items-center mt-8'
             variants={section}
             transition={{ duration: 0.8 }}
           > */}
-          <Section>
-            <div class="left flex items-center gap-12 xl:gap-16">
-              <div class="image-container w-40 rounded-full overflow-hidden object-contain mr-8 border-2 border-black">
+          <Section
+            align='center'
+          >
+            <div class="flex-col md:flex md:flex-row items-center gap-12 xl:gap-16">
+              <div class="mx-auto md:mx-0 w-64 rounded-full overflow-hidden object-contain mb-8 md:mb-0 md:mr-8 border-4 border-black dark:border-white">
                 <Image
                   src={profilePic}
                   alt="Picture of Dylan Smith"
                   layout='responsive'
                   objectFit='cover'
+                  // width={16}
+                  // height={9}
                   width={'200px'}
                   height={'200px'}
                 />
               </div>
-              <div className='light flex flex-col text-primary'>
-                <h1 className='text-4xl text-skin-base'>Dylan Smith</h1>
+
+              <div className='flex flex-col justify-between'>
+                <h1 className='text-4xl md:text-7xl'>hi, I'm dylan</h1>
                 {/* <span className=''>subtitle</span> */}
-                <div className='right text-3xl flex flex-col'>
+                <div className='right text-3xl md:text-4xl flex flex-col'>
                   <TypewriterComponent
                     options={{
                       strings: ['', 'front-end developer', 'ui/uix designer', 'logo designer', 'husband', 'dad'],
@@ -101,10 +108,11 @@ export default function Home({ allPosts, preview }) {
                       deleteSpeed: 'natural'
                     }}
                   />
-                  <span>and lover of all things web related</span>
+                  <span>and lover of all things web related.</span>
                   <span>based in new york</span>
                 </div>
               </div>
+
             </div>
           </Section>
           {/* </motion.div> */}
@@ -127,8 +135,32 @@ export default function Home({ allPosts, preview }) {
             <span>based in new york</span>
           </motion.div> */}
 
+          {/* <Section>
+            bio here
+          </Section> */}
 
-          <Section>
+          <Section gap={12}>
+            <h1 className='text-center'>featured project</h1>
+            <ProjectCard
+              headline='steamparty.io'
+              subtitle='A React Webapp to find common games between multiple Steam libraries.'
+              image='https://picsum.photos/1000'
+              featured={true}
+              externalLink='https://steamparty.io'
+              external={true}
+              caseStudyLink='/post/steamparty-io'
+              external2={false}
+            >
+
+            </ProjectCard>
+            <span className='w-full h-[2px] bg-sky-300'></span>
+          </Section>
+
+          <Section
+            justify='center'
+            align='center'
+            gap={12}
+          >
             {/* <motion.div
             className='featured-work flex flex-col items-center gap-12 p-8 text-skin-base'
             variants={section}
@@ -145,6 +177,8 @@ export default function Home({ allPosts, preview }) {
                 summary={heroPost.summary}
               />
             )} */}
+            <h1>recent blog posts</h1>
+            
             {morePosts.length > 0 && <MoreStories posts={morePosts} />
             }
 
@@ -154,15 +188,22 @@ export default function Home({ allPosts, preview }) {
               </Link>
               <ChevronDoubleRightIcon className='w-6' />
             </button> */}
-            <div className='mt-8'>
+            <span className='w-full h-[2px] bg-sky-300'></span>
+            <div className='mt-8 flex gap-16'>
               <Button
-                bgColor='black'
-                textColor='white'
+                bgColor='skin-bg-accent'
+                textColor='skin-light'
+                href='/post'
               >
-                <Link href='/work'>
-                  all my work
-                </Link>
-                <ChevronDoubleRightIcon className='w-6' />
+                all posts
+              </Button>
+
+              <Button
+                bgColor='skin-bg-accent'
+                textColor='skin-light'
+                href='/work'
+              >
+                my work
               </Button>
             </div>
 

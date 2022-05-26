@@ -1,19 +1,27 @@
+import { ChevronUpIcon } from "@heroicons/react/outline";
 import classNames from "classnames";
+import Link from "next/link";
+import ExternalButton from "./ExternalButton";
+import InternalButton from "./InternalButton";
 
-function Button({ size, value, bgColor, textColor, children }) {
+function Button({
+  size,
+  value,
+  bgColor,
+  textColor,
+  children,
+  href = "/",
+  external,
+}) {
   return (
-    <button
-      className={classNames(
-        `bg-${bgColor} text-${textColor} font-bold py-4 px-8 rounded flex items-center`,
-        {
-          "text-xs": size === "sm",
-          "text-xl": size === "lg",
-        }
+    <div>
+      {external ? (
+        <ExternalButton href={href} children={children} />
+      ) : (
+        <InternalButton href={href} children={children} />
       )}
-    >
-      {children}
-    </button>
-  )
-};
+    </div>
+  );
+}
 
 export default Button;

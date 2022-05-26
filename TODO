@@ -1,0 +1,18 @@
+Todo:
+  ☐ Contact page
+  ☐ cleanup custom colors and tailwind.config
+  ☐ hide back to home on home page
+  ☐ organize file structure
+  ☐ am I using SSR/SSG appropriately?
+  ☐ logo fill
+  ☐ nav item color
+  ☐ apply light/dark theme to all components
+  ☐ refactor app index
+  ☐ componentize category tags
+  ☐ change WORK page to not pull from sanity?
+  ☐ expand home page with featured works
+  ☐ shrink card previews?
+  ☐ blurry text when rotating (or remove rotation)
+  ☐ MOBILE
+    ☐ featured project
+    ✔ nav @done(22-05-24 11:56)

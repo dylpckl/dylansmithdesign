@@ -29,17 +29,71 @@
       --color-text-muted: #c7d2f3;
       --color-text-inverted: #4f56e5;
       --color-text-accent: #52C2B1;
-      --color-text-light: #F472B6;
-      --color-text-dark: #EBDFFF;
+      /* --color-text-light: #333a49; */
+      /* --color-text-dark: #EBDFFF; */
       --color-fill: #4338ca;
       --color-button-accent: #ffffff;
       --color-button-accent-hover: #eef2ff;
       --color-button-muted: #6366f1;
+      
+      --color-text-light: #333a49;
+      --color-text-dark: #b8c1ec;
       --color-bg-light: #EBDFFF;
-      --color-bg-dark: #2E3E4E;
-      --color-bg-primary: #F472B6;
+      /* --color-bg-light: #EBDFFF; */
+      --color-bg-dark: #232946;
+      /* --color-bg-dark: #24313e; */
+
+      --color-bg-accent: #F472B6;
+
+
+
+      /* Elements */
+      --color-el-bg-light: #bcc6ff;
+      --color-el-bg-dark: #232946;
+      --color-el-headline: #fffffe;
+      --color-el-paragraph: #b8c1ec;
+      --color-el-button: #eebbc3;
+      --color-el-button-text: #232946;
+      /* Illustrations */
+      --color-il-stroke-light: #121629;
+      --color-il-stroke-dark: #eebbc3;
+      --color-il-highlight: #eebbc3;
+      --color-il-main: #b8c1ec;
+      --color-il-secondary: #fffffe;
+      --color-il-tertiary: #eebbc3;
+      /* Card */
+      --color-card-bg-light: #fffffe;
+      --color-card-bg-dark: #d4d8f0;
+      --color-card-text: #232946;
+      --color-card-tag-bg: #232946;
+      --color-card-tag-text: #b8c1ec;
+      /* Icons */
+      --color-icon-stroke-light: #121629;
+      --color-icon-stroke-dark: #eebbc3;
+      --color-icon-highlight: #eebbc3;
+      --color-icon-main: #b8c1ec;
+      --color-icon-secondary: #fffffe;
+      --color-icon-tertiary: #eebbc3;
+      /* Shadows */
+      --color-shadow-light: #F472B6;
+      --color-shadow-dark: #52C2B1;
+      
+      /* --color-test-bg: #232946;
+      --color-test-headline: #fffffe;
+      --color-test-paragraph: #b8c1ec;
+      --color-test-button: #eebbc3;
+      --color-test-button-text: #232946;
+      --color-test-main: #b8c1ec;
+      --color-test-secondary: #fffffe;
+      --color-test-tertiary: #eebbc3;
+      --color-test-stroke: #121629;
+      --color-test-highlight: #eebbc3; */
   }
 }
+
+/* old codes:
+dark: 2E3E4E */
+
 
 /* html,
 body {
