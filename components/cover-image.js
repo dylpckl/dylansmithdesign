@@ -1,4 +1,3 @@
-import cn from 'classNames'
 import Link from 'next/link'
 import imageUrlBuilder from '@sanity/image-url'
 import client from '../client'
