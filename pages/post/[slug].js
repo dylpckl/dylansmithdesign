@@ -76,7 +76,7 @@ const ptComponents = {
 // readingTime();
 
 const Post = ({ post }) => {
-  const { title, name, categories, authorImage, coverImage, body = [] } = post
+  const { title ='Missing title', name = 'Missing name', categories, authorImage, coverImage, body = [] } = post
   return (
     <article className='py-16 px-32 flex flex-col gap-4'>
 
