@@ -16,9 +16,9 @@ function Button({
   return (
     <div>
       {external ? (
-        <ExternalButton href={href} children={children} />
+        <ExternalButton href={href}>{children}</ExternalButton>
       ) : (
-        <InternalButton href={href} children={children} />
+        <InternalButton href={href}>{children}</InternalButton>
       )}
     </div>
   );

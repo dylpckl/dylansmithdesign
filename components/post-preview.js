@@ -67,17 +67,17 @@ export default function PostPreview({
         <div className='mt-auto'>
           {categories && (
             <div className='flex gap-2 items-center'>
-              <ul className='flex gap-2'>
+              <ul className='flex gap-2 items-center'>
                 {categories.map
                   (category =>
-                    <div className='flex gap-2 items-center'>
+                    // <div className='flex gap-2 items-center'>
                       <li
                         key={category}
                         className="bg-skin-card-tag-bg text-skin-card-tag-text text-sm rounded-lg py-1 px-2"
                       >
                         {category}
                       </li>
-                    </div>
+                    // </div>
                   )}
               </ul>
             </div>

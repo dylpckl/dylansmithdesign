@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 
-function ExternalButton({href, size, children}) {
+function ExternalButton({href, size}) {
     return (
         <a href={href} target="_blank">
             <button
@@ -13,7 +13,7 @@ function ExternalButton({href, size, children}) {
                     }
                 )}
             >
-                {children}
+                {/* {children} */}
             </button>
         </a>
   )

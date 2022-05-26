@@ -7,6 +7,8 @@ node_modules
 
 # testing
 /coverage
+contact
+resources
 
 # next.js
 /.next/
