@@ -25,7 +25,7 @@ const ptComponents = {
             loading='lazy'
             src={urlFor(value).width(820).height(440).crop('entropy').fit('max').auto('format')}
           /> */}
-          <Image 
+          <Image
             src={urlFor(value).width(820).height(440).crop('entropy').fit('max').auto('format')}
             alt={value.alt || ' '}
             loading='lazy'
@@ -34,7 +34,7 @@ const ptComponents = {
       )
     },
     span: ({ children }) => <span className="text-lg">{children}</span>,
-    break: ({ children }) => <hr className='lineBreak'/>,
+    break: ({ children }) => <hr className='lineBreak' />,
   },
 
   list: {
@@ -76,7 +76,7 @@ const ptComponents = {
 // readingTime();
 
 const Post = ({ post }) => {
-  const { title ='Missing title', name = 'Missing name', categories, authorImage, coverImage, body = [] } = post
+  const { title = 'Missing title', name = 'Missing name', categories, authorImage, coverImage, body = [] } = post
   return (
     <article className='py-16 px-32 flex flex-col gap-4'>
 
@@ -89,17 +89,17 @@ const Post = ({ post }) => {
         {/* <img className='rounded-md' src={urlFor(coverImage).width(500).height(250).url()}></img> */}
 
         <Image
-                    // src="https://picsum.photos/200/300"
-                    alt=''
-                    src={urlFor(coverImage).width(500).height(250).url()}
-                    width={16}
-                    height={9}
-                    layout='responsive'
-                    objectFit='cover'
-                // className=' min-h'
-                />
+          // src="https://picsum.photos/200/300"
+          alt=''
+          src={urlFor(coverImage).width(500).height(250).url()}
+          width={16}
+          height={9}
+          layout='responsive'
+          objectFit='cover'
+        // className=' min-h'
+        />
 
-        <h1 className='mt-4'>{title}</h1>
+        {title && <h1 className='mt-4'>{title}</h1>}
         {/* <span>By {name}</span>
  */}
         <div className='flex justify-start items-center gap-12'>
