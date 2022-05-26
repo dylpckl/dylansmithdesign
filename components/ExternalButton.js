@@ -1,5 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
+import { ExternalLinkIcon } from '@heroicons/react/outline'
 
 function ExternalButton({ href, size, children }) {
     return (
@@ -14,6 +15,7 @@ function ExternalButton({ href, size, children }) {
                 )}
             >
                 {children}
+                <ExternalLinkIcon className='ml-4 h-6'/>
             </button>
         </a>
   )
