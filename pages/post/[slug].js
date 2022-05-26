@@ -87,8 +87,7 @@ const Post = ({ post }) => {
       >
         {/* <div className='header flex flex-col gap-4 mb-12'> */}
         {/* <img className='rounded-md' src={urlFor(coverImage).width(500).height(250).url()}></img> */}
-
-        <Image
+        {coverImage && (<Image
           // src="https://picsum.photos/200/300"
           alt=''
           src={urlFor(coverImage).width(500).height(250).url()}
@@ -96,8 +95,8 @@ const Post = ({ post }) => {
           height={9}
           layout='responsive'
           objectFit='cover'
-        // className=' min-h'
-        />
+        />)}
+
 
         {title && <h1 className='mt-4'>{title}</h1>}
         {/* <span>By {name}</span>
