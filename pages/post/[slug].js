@@ -7,6 +7,7 @@ import { useReadingTime } from 'react-reading-time-estimator'
 import { useRef } from 'react'
 import Section from '../../components/section'
 import categoriesList from '../../components/categoriesList'
+import Image from 'next/image'
 
 function urlFor(source) {
   return ImageUrlBuilder(client).image(source)
@@ -81,7 +82,17 @@ const Post = ({ post }) => {
         align='normal'
       >
         {/* <div className='header flex flex-col gap-4 mb-12'> */}
-        <img className='rounded-md' src={urlFor(coverImage).width(500).height(250).url()}></img>
+        {/* <img className='rounded-md' src={urlFor(coverImage).width(500).height(250).url()}></img> */}
+
+        <Image
+                    // src="https://picsum.photos/200/300"
+                    src={urlFor(coverImage).width(500).height(250).url()}
+                    width={16}
+                    height={9}
+                    layout='responsive'
+                    objectFit='cover'
+                // className=' min-h'
+                />
 
         <h1 className='mt-4'>{title}</h1>
         {/* <span>By {name}</span>

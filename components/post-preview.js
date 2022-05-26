@@ -40,10 +40,10 @@ export default function PostPreview({
       
       >
         {/* <div className='flex flex-col gap-4 bg-skin-bg-accent hover:drop-shadow-neu-light hover:translate-y-[-.25rem] dark:hover:drop-shadow-neu-dark transition-all p-4 border-4 border-black rounded text-skin-light cursor-pointer '> */}
-        <div className="flex justify-center bg-skin">
+        {/* <div className="flex justify-center bg-skin"> */}
           {/* <CoverImage slug={slug} title={title} imageObject={coverImage} url={urlFor(coverImage).url()} /> */}
           <CoverImage slug={slug} title={title} imageObject={coverImage} url={coverImage} />
-        </div>
+        {/* </div> */}
         <h3 className="flex text-3xl md:text-xl lg:text-2xl xl:text-3xl">
 
           <div className='flex justify-between items-center'>

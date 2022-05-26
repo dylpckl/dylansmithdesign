@@ -39,7 +39,7 @@ function contact() {
               placeholder="johndoe@gmail.com"
             />
             <p className="text-xs italic text-gray-600">
-              Make it as long and as crazy as you'd like
+              Make it as long and as crazy as youd like
             </p>
           </div>
         </div>
