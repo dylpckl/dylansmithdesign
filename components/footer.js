@@ -1,22 +1,4 @@
 import React from 'react'
-// import styles from '../styles/Home.module.css'
-import Image from 'next/image'
-
-// .footer {
-//     display: flex;
-//     flex: 1;
-//     padding: 2rem 0;
-//     border-top: 1px solid #eaeaea;
-//     justify-content: center;
-//     align-items: center;
-//   }
-  
-//   .footer a {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     flex-grow: 1;
-//   }
 
 function Footer() {
     return (
