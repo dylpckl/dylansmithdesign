@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import classNames from 'classnames'
 
-function InternalButton({href, size}) {
+function InternalButton({href, size, children}) {
     return (
         <Link href={href}>
             <button
@@ -14,7 +14,7 @@ function InternalButton({href, size}) {
                     }
                 )}
             >
-                {/* {children} */}
+                {children}
             </button>
         </Link>
   )

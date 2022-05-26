@@ -175,7 +175,7 @@ function Navbar() {
 
                     <motion.div
                         variants={mobileMenuVariant}
-                        className="mobile-menu fixed flex flex-col w-full gap-2 p-4 bg-indigo-300 top-0 left-0"
+                        className="mobile-menu fixed flex flex-col w-full gap-2 p-4 bg-indigo-300 top-0 left-0 z-40"
                     >
                         <motion.button
                             variants={fadeInVariant}
@@ -188,7 +188,6 @@ function Navbar() {
                         </motion.button>
                         <motion.ul variants={ulVariant}>
                             
-                            getNavItems(false)
                             {MOBILE_NAV_ITEMS.map(navItem => (
                                 <motion.li
                                     whileTap={{ scale: 0.95 }}

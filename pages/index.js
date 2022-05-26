@@ -153,7 +153,7 @@ export default function Home({ allPosts, preview }) {
             >
 
             </ProjectCard>
-            <span className='w-full h-[2px] bg-sky-300'></span>
+            <span className='w-full h-[3px] dark:bg-sky-300 bg-slate-500'></span>
           </Section>
 
           <Section
