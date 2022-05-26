@@ -8,10 +8,12 @@ import { getAllPostsForHome, getPostAndMorePosts } from '../api/api'
 import PostPreview from '../../components/post-preview'
 import MoreStories from '../../components/more-stories'
 import { useEffect, useState } from 'react'
+import { motion } from 'framer-motion'
 
 function urlFor(source) {
   return ImageUrlBuilder(client).image(source)
 }
+
 
 // const list = {
 //   visible: {
@@ -35,6 +37,44 @@ function urlFor(source) {
 // }
 
 // 'categories': categories[]->title,
+
+const container = {
+  visible: {
+    opacity: 1,
+    transition: {
+      when: "beforeChildren",
+      staggerChildren: 0.1,
+      delayChildren: 0.5
+    },
+  },
+  hidden: {
+    opacity: 0,
+    transition: {
+      when: "afterChildren",
+    },
+  },
+}
+
+const singlePost = {
+  visible: {
+    opacity: 1,
+    y: "0%",
+    transition: {
+      duration: 0.45,
+      ease: "easeOut"
+    }
+  },
+  // visible: { opacity: 1, y: 0 },
+  hidden: {
+    opacity: 0,
+    y: "100%",
+    transition: {
+      duration: 0.15,
+      ease: "easeInOut"
+    }
+  },
+  // hidden: { opacity: 0, y: 10 },
+}
 
 // function postIndex() {
 const Index = ({ posts, categories }) => {
@@ -135,23 +175,34 @@ const Index = ({ posts, categories }) => {
         )}
       </div>
 
-      <div className='grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-12'>
+      <motion.div
+        initial='hidden'
+        whileInView='visible'
+        viewport={{once: true}}
+        className='grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-12'
+        variants={container}
+      >
+        {/* <div className='grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-12'> */}
         {postItems.length > 0 && postItems.map(
           (post) =>
             post.slug && (
-              <PostPreview
-                key={post.slug}
-                title={post.title}
-                coverImage={post.coverImage}
-                date={post.date}
-                author={post.author}
-                slug={`/post/${post.slug}`}
-                summary={post.summary}
-                categories={post.categories}
-              />
+              <motion.div initial='hidden' variants={singlePost} whileInView='visible' viewport={{once:true}}>
+                <PostPreview
+                  key={post.slug}
+                  title={post.title}
+                  coverImage={post.coverImage}
+                  date={post.date}
+                  author={post.author}
+                  slug={`/post/${post.slug}`}
+                  summary={post.summary}
+                  categories={post.categories}
+                />
+              </motion.div>
             )
         )}
-      </div>
+        {/* </div> */}
+      </motion.div>
+
     </Section>
   )
 }

@@ -29,15 +29,17 @@ export default function CoverImage({ title, url, imageObject, slug }) {
         // <div className='mx-5 sm:mx-0'>
         //     {image}
         // </div>
-        <Image
-            src={urlFor(imageObject).url()}
-            alt={`Cover image for ${title}`}
-            width={16}
-            height={9}
-            layout='responsive'
-            objectFit='cover'
-        // className=' min-h'
-        />
+      
+                <Image
+                    src={urlFor(imageObject).url()}
+                    alt={`Cover image for ${title}`}
+                    width={16}
+                    height={9}
+                    layout='responsive'
+                    objectFit='cover'
+                // className=' min-h'
+                />
+            
     )
     // return (
     //     <div className='mx-5 sm:mx-0'>

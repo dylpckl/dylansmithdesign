@@ -7,6 +7,7 @@ import { useReadingTime } from 'react-reading-time-estimator'
 import { useRef } from 'react'
 import Section from '../../components/section'
 import Image from 'next/image'
+import Link from 'next/link'
 
 function urlFor(source) {
   return ImageUrlBuilder(client).image(source)
@@ -20,7 +21,7 @@ const ptComponents = {
       }
       return (
         <div className='my-8'>
-        {/* <div className='flex justify-center my-8 block'> */}
+          {/* <div className='flex justify-center my-8 block'> */}
           {/* <img
             alt={value.alt || ' '}
             loading='lazy'
@@ -137,6 +138,13 @@ const Post = ({ post }) => {
           />
         </div>
       </Section>
+
+      <button className=''>
+        <Link href='/post/'>
+          back to blogs
+        </Link>
+      </button>
+
     </article >
   )
 }

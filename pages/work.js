@@ -1,6 +1,7 @@
 import Button from "../components/button"
 import Section from "../components/section"
 import ProjectCard from "../components/ProjectCard"
+import DrifterBladesCardPic from '../public/images/work/db01.png'
 
 function newwork() {
     return (
@@ -30,10 +31,14 @@ function newwork() {
                 </div> */}
 
                 <ProjectCard
-                    headline='project headline'
-                    subtitle='Deserunt deserunt sit laborum mollit eu. Ut labore cupidatat magna minim id elit cillum. Exercitation ex occaecat voluptate sint enim irure adipisicing. Consequat ut consequat proident in. Nulla eiusmod pariatur sint voluptate sint est excepteur culpa labore adipisicing. Irure minim reprehenderit et exercitation fugiat ad et culpa est. Cillum tempor id anim ad velit nulla.'
+                    headline='steamparty.io'
+                    subtitle='React webapp to see what Steam games you have in common with friends.'
                     image='https://picsum.photos/1000'
                     featured={true}
+                    externalLink='https://steamparty.io'
+                    external={true}
+                    caseStudyLink='/post/steamparty-io'
+                    external2={false}
                 />
 
                 {/* <div className='col-span-1 text-black flex flex-col hover:drop-shadow-neu-light dark:hover:drop-shadow-neu-dark hover:translate-y-[-0.25rem] transition-all'>
@@ -49,22 +54,36 @@ function newwork() {
                 </div> */}
 
                 <ProjectCard
-                    headline='DrifterBlades'
-                    subtitle='test'
-                    image='https://picsum.photos/1000'
+                    headline='Drifter Blades'
+                    subtitle='Shopify e-commerce site for a custom knife craftsman.'
+                    image={DrifterBladesCardPic}
                     featured={false}
+                    externalLink='https://drifterblades.com'
+                    external={true}
+                    caseStudyLink='/post/drifterblades'
+                    external2={false}
                 />
+
                 <ProjectCard
                     headline='project headline'
                     subtitle='Deserunt deserunt sit laborum mollit eu. Ut labore cupidatat magna minim id elit cillum. Exercitation ex occaecat voluptate sint enim irure adipisicing. Consequat ut consequat proident in. Nulla eiusmod pariatur sint voluptate sint est excepteur culpa labore adipisicing. Irure minim reprehenderit et exercitation fugiat ad et culpa est. Cillum tempor id anim ad velit nulla.'
                     image='https://picsum.photos/1000'
                     featured={false}
+                    externalLink='https://steamparty.io'
+                    external={true}
+                    caseStudyLink='/post/steamparty-io'
+                    external2={false}
                 />
+
                 <ProjectCard
                     headline='project headline'
                     subtitle='test.'
                     image='https://picsum.photos/1000'
                     featured={false}
+                    externalLink='https://steamparty.io'
+                    external={true}
+                    caseStudyLink='/post/steamparty-io'
+                    external2={false}
                 />
 
             </div>

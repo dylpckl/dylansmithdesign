@@ -37,7 +37,7 @@ function ProjectCard({ headline, subtitle, body, image, href, externalLink, exte
     return (
         <div className={cn(`${parentWidth} ${flexDirection} ${parentMinHeight} text-black hover:drop-shadow-neu-light dark:hover:drop-shadow-neu-dark hover:translate-y-[-0.25rem] transition-all border-4 rounded-lg border-skin-il-stroke-light dark:border-skin-il-stroke-dark relative flex-col md:flex `)}>
             {/* <div className='col-span-1 text-black flex flex-col hover:drop-shadow-neu-light dark:hover:drop-shadow-neu-dark hover:translate-y-[-0.25rem] transition-all border-4 rounded-lg border-skin-il-stroke-light dark:border-skin-il-stroke-dark'> */}
-            <div className={cn(`${childWidth} ${imageContainerDisplay}`)}>
+            <div className={cn(`${childWidth} ${imageContainerDisplay} border-b-4 border-black`)}>
                 <Image
                     // src="https://picsum.photos/200/300"
                     src={image}
@@ -52,7 +52,7 @@ function ProjectCard({ headline, subtitle, body, image, href, externalLink, exte
 
             <div className={cn(`${childWidth} flex flex-col gap-4 p-4 lg:gap-8 lg:p-8 bg-skin-card-bg-light dark:bg-skin-card-bg-dark`)}>
                 <h1 className='text-4xl text-skin-inverted'>{headline}</h1>
-                <h3 className='text-lg'>{`${subtitle.substring(0, MAX_LENGTH)}`}</h3>
+                <h3 className='text-lg min-h-[6rem]'>{`${subtitle.substring(0, MAX_LENGTH)}`}</h3>
                 {/* <h3 className='text-lg'>{subtitle}</h3> */}
                 {/* <p className=''>{body}</p> */}
                 <div className="mt-auto flex justify-around lg:justify-end gap-2 lg:gap-8">
