@@ -45,7 +45,7 @@ function resources() {
                     variants={child}
                 >
                     <h1>resources</h1>
-                    <p>i've spent alot of time compiling resources for my own uses and am happy to share my findings here</p>
+                    <p>i&apos;ve spent alot of time compiling resources for my own uses and am happy to share my findings here</p>
                     <p>jump to: design | freelancing | 3</p>
                 </motion.div>
 

@@ -6,7 +6,7 @@ import Logo from '../logo'
 import { useState } from 'react'
 import { motion } from 'framer-motion';
 
-function navbar() {
+function Navbar() {
     const [mobileNavOpen, setMobileNavOpen] = useState(false);
     const MOBILE_NAV_ITEMS = [
         {
@@ -266,7 +266,7 @@ function navbar() {
 
 
                     <div className="right flex gap-4 lg:gap-12 items-center text-sm lg:text-lg font-bold">
-                        <a className='flex items-center gap-4 list-none uppercase' href='https://github.com/dylpckl/dylansmithdesign' target='_blank'>
+                        <a className='flex items-center gap-4 list-none uppercase' href='https://github.com/dylpckl/dylansmithdesign' target='_blank' rel='noreferrer'>
                             <li className='flex items-center gap-4 bg-transparent p-2 hover:bg-black hover:drop-shadow-neu-dark-sm hover:text-skin-accent list-none uppercase transition-all rounded-md cursor-pointer'>
                                 source
                                 <CodeIcon
@@ -287,4 +287,4 @@ function navbar() {
     )
 };
 
-export default navbar
+export default Navbar

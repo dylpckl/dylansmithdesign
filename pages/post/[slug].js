@@ -21,10 +21,15 @@ const ptComponents = {
       }
       return (
         <div className='flex justify-center my-8'>
-          <img
+          {/* <img
             alt={value.alt || ' '}
             loading='lazy'
             src={urlFor(value).width(820).height(440).crop('entropy').fit('max').auto('format')}
+          /> */}
+          <Image 
+            src={urlFor(value).width(820).height(440).crop('entropy').fit('max').auto('format')}
+            alt={value.alt || ' '}
+            loading='lazy'
           />
         </div>
       )
@@ -86,6 +91,7 @@ const Post = ({ post }) => {
 
         <Image
                     // src="https://picsum.photos/200/300"
+                    alt=''
                     src={urlFor(coverImage).width(500).height(250).url()}
                     width={16}
                     height={9}

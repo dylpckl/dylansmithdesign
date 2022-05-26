@@ -9,7 +9,7 @@ function contact() {
           <div className="mb-6 w-full px-3 md:mb-0">
             <label
               className="mb-2 block text-xs font-bold uppercase tracking-wide text-gray-700"
-              for="grid-first-name"
+              htmlFor="grid-first-name"
             >
               Name
             </label>
@@ -28,7 +28,7 @@ function contact() {
           <div className="w-full px-3">
             <label
               className="mb-2 block text-xs font-bold uppercase tracking-wide text-gray-700"
-              for="email"
+              htmlFor="email"
             >
               Email address
             </label>
