@@ -1,5 +1,5 @@
 import Navbar from './nav/navbar'
-import Footer from './Footer'
+import Footer from './footer'
 import Head from 'next/head'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
