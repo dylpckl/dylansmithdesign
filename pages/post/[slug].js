@@ -6,7 +6,6 @@ import Avatar from '../../components/avatar'
 import { useReadingTime } from 'react-reading-time-estimator'
 import { useRef } from 'react'
 import Section from '../../components/section'
-import categoriesList from '../../components/categoriesList'
 import Image from 'next/image'
 
 function urlFor(source) {

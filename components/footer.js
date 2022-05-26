@@ -18,7 +18,7 @@ import Image from 'next/image'
 //     flex-grow: 1;
 //   }
 
-function footer() {
+function Footer() {
     return (
         <footer className='flex flex-1 p-8 justify-center items-center text-skin-base'>
             <a
@@ -37,4 +37,4 @@ function footer() {
     )
 }
 
-export default footer
+export default Footer
