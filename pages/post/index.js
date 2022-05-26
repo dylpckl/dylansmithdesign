@@ -37,7 +37,7 @@ function urlFor(source) {
 // 'categories': categories[]->title,
 
 // function postIndex() {
-const index = ({ posts, categories }) => {
+const Index = ({ posts, categories }) => {
 
   const [postItems, setpostItems] = useState(posts);
   const [filteredPostItems, setfilteredPostItems] = useState(posts);
@@ -190,4 +190,4 @@ export async function getStaticProps() {
   }
 }
 
-export default index
+export default Index

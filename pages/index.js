@@ -81,8 +81,8 @@ export default function Home({ allPosts, preview }) {
           <Section
             align='center'
           >
-            <div class="flex-col md:flex md:flex-row items-center gap-12 xl:gap-16">
-              <div class="mx-auto md:mx-0 w-64 rounded-full overflow-hidden object-contain mb-8 md:mb-0 md:mr-8 border-4 border-black dark:border-white">
+            <div className="flex-col md:flex md:flex-row items-center gap-12 xl:gap-16">
+              <div className="mx-auto md:mx-0 w-64 rounded-full overflow-hidden object-contain mb-8 md:mb-0 md:mr-8 border-4 border-black dark:border-white">
                 <Image
                   src={profilePic}
                   alt="Picture of Dylan Smith"
@@ -96,7 +96,7 @@ export default function Home({ allPosts, preview }) {
               </div>
 
               <div className='flex flex-col justify-between'>
-                <h1 className='text-4xl md:text-7xl'>hi, I'm dylan</h1>
+                <h1 className='text-4xl md:text-7xl'>hi, I&apos;m dylan</h1>
                 {/* <span className=''>subtitle</span> */}
                 <div className='right text-3xl md:text-4xl flex flex-col'>
                   <TypewriterComponent

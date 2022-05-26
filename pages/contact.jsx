@@ -4,53 +4,46 @@ function contact() {
   return (
     <Section>
       <h1>make this a newsletter instead?</h1>
-
-    
-
-      <form class="w-full max-w-lg">
-        <div class="flex flex-wrap -mx-3 mb-6">
-          <div class="w-full px-3 mb-6 md:mb-0">
+      <form className="w-full max-w-lg">
+        <div className="-mx-3 mb-6 flex flex-wrap">
+          <div className="mb-6 w-full px-3 md:mb-0">
             <label
-              class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+              className="mb-2 block text-xs font-bold uppercase tracking-wide text-gray-700"
               for="grid-first-name"
             >
               Name
             </label>
             <input
-              class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+              className="mb-3 block w-full appearance-none rounded border border-red-500 bg-gray-200 py-3 px-4 leading-tight text-gray-700 focus:bg-white focus:outline-none"
               id="grid-first-name"
               type="text"
               placeholder="John Doe"
             />
-            <p class="text-red-500 text-xs italic">
+            <p className="text-xs italic text-red-500">
               Please fill out this field.
             </p>
           </div>
         </div>
-        <div class="flex flex-wrap -mx-3 mb-6">
-          <div class="w-full px-3">
+        <div className="-mx-3 mb-6 flex flex-wrap">
+          <div className="w-full px-3">
             <label
-              class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+              className="mb-2 block text-xs font-bold uppercase tracking-wide text-gray-700"
               for="email"
             >
               Email address
             </label>
             <input
-              class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+              className="mb-3 block w-full appearance-none rounded border border-gray-200 bg-gray-200 py-3 px-4 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none"
               id="email"
               type="text"
               placeholder="johndoe@gmail.com"
             />
-            <p class="text-gray-600 text-xs italic">
+            <p className="text-xs italic text-gray-600">
               Make it as long and as crazy as you'd like
             </p>
           </div>
         </div>
-        <input 
-          className=""
-          id="submit"
-          type="submit"
-        />
+        <input className="" id="submit" type="submit" />
       </form>
     </Section>
   );
