@@ -117,7 +117,7 @@ const Index = ({ posts, categories }) => {
       gap={12}
     >
       <h1 className='mb-8'>blog posts</h1>
-      <div className='flex gap-8'>
+      <div className='grid grid-cols-4 md:flex gap-4 md:gap-8'>
         {categories.length > 0 && categories.map(
           (category) =>
             <button

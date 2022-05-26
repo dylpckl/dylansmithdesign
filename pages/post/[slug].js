@@ -19,16 +19,22 @@ const ptComponents = {
         return null
       }
       return (
-        <div className='flex justify-center my-8'>
+        <div className='my-8'>
+        {/* <div className='flex justify-center my-8 block'> */}
           {/* <img
             alt={value.alt || ' '}
             loading='lazy'
             src={urlFor(value).width(820).height(440).crop('entropy').fit('max').auto('format')}
           /> */}
           <Image
-            src={urlFor(value).width(820).height(440).crop('entropy').fit('max').auto('format')}
+            // src={urlFor(value).width(820).height(440).crop('entropy').fit('max').auto('format').url()}
+            src={urlFor(value).url()}
             alt={value.alt || ' '}
             loading='lazy'
+            width={16}
+            height={9}
+            layout='responsive'
+            objectFit='contain'
           />
         </div>
       )
@@ -49,6 +55,8 @@ const ptComponents = {
 
   block: {
     h1: ({ children }) => <h1 className="text-6xl">{children}</h1>,
+    h2: ({ children }) => <h2 className="text-4xl">{children}</h2>,
+    h3: ({ children }) => <h3 className="text-3xl">{children}</h3>,
     blockquote: ({ children }) => <blockquote className="italic text-3xl m-8 my-16 px-8 border-l-2 border-black dark:border-white">{children}</blockquote>,
     paragraph: ({ children }) => <p className="text-lg">{children}</p>,
     normal: ({ children }) => <span className="text-lg">{children}</span>,
@@ -58,22 +66,6 @@ const ptComponents = {
     link: ({ children }) => <a className="text-lg underline text-skin-accent cursor-pointer">{children}</a>,
   }
 }
-
-// const {
-//   text,
-//   minutes,
-//   words,
-//   time,
-// } = useReadingTime(text);
-
-// function readingTime() {
-//   const text = useRef(article)
-//   const wpm = 225;
-//   const words = text.trim().split(/\s+/).length;
-//   const time = Math.ceil(words / wpm);
-//   document.getElementById("time").innerText = time;
-// }
-// readingTime();
 
 const Post = ({ post }) => {
   const { title = 'Missing title', name = 'Missing name', categories, authorImage, coverImage, body = [] } = post || {}
@@ -89,8 +81,8 @@ const Post = ({ post }) => {
         {/* <img className='rounded-md' src={urlFor(coverImage).width(500).height(250).url()}></img> */}
         {coverImage && (<Image
           // src="https://picsum.photos/200/300"
-          alt=''
           src={urlFor(coverImage).width(500).height(250).url()}
+          alt=''
           width={16}
           height={9}
           layout='responsive'

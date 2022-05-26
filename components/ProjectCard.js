@@ -45,6 +45,7 @@ function ProjectCard({ headline, subtitle, body, image, href, externalLink, exte
                     height={9}
                     layout={layout}
                     objectFit='cover'
+                    alt=''
                 // className=' min-h'
                 />
             </div>
