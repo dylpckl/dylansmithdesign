@@ -64,7 +64,7 @@ function newwork() {
                     external2={false}
                 />
 
-                <ProjectCard
+                {/* <ProjectCard
                     headline='project headline'
                     subtitle='Deserunt deserunt sit laborum mollit eu. Ut labore cupidatat magna minim id elit cillum. Exercitation ex occaecat voluptate sint enim irure adipisicing. Consequat ut consequat proident in. Nulla eiusmod pariatur sint voluptate sint est excepteur culpa labore adipisicing. Irure minim reprehenderit et exercitation fugiat ad et culpa est. Cillum tempor id anim ad velit nulla.'
                     image='https://picsum.photos/1000'
@@ -84,7 +84,7 @@ function newwork() {
                     external={true}
                     caseStudyLink='/post/steamparty-io'
                     external2={false}
-                />
+                /> */}
 
             </div>
 

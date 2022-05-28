@@ -153,11 +153,14 @@ const Index = ({ posts, categories }) => {
 
   return (
     <Section
-      justify='start'
+      justify='center'
+      align='center'
       gap={12}
     >
       <h1 className='mb-8'>blog posts</h1>
+      {/* <button onClick={() => setSelectedCategory('')}>reset</button>
       <div className='grid grid-cols-4 md:flex gap-4 md:gap-8'>
+
         {categories.length > 0 && categories.map(
           (category) =>
             <button
@@ -167,26 +170,26 @@ const Index = ({ posts, categories }) => {
             >
               <div>
                 {category.title}
-              </div>
+              </div> */}
               {/* <div>
                 {categories.length}
               </div> */}
-            </button>
+            {/* </button>
         )}
-      </div>
+      </div> */}
 
       <motion.div
         initial='hidden'
         whileInView='visible'
-        viewport={{once: true}}
-        className='grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-12'
+        viewport={{ once: true }}
+        className='grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 auto-rows-[minmax(0,_2fr)] gap-12 md:gap-16'
         variants={container}
       >
         {/* <div className='grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-12'> */}
         {postItems.length > 0 && postItems.map(
           (post) =>
             post.slug && (
-              <motion.div initial='hidden' variants={singlePost} whileInView='visible' viewport={{once:true}}>
+              <motion.div initial='hidden' variants={singlePost} whileInView='visible' viewport={{ once: true }}>
                 <PostPreview
                   key={post.slug}
                   title={post.title}
