@@ -21,7 +21,7 @@ export default function Avatar({ name, picture }) {
                     height={'48px'}
                 />
             )}
-            <div className="text-lg">{name}</div>
+            <div className="text-lg font-semibold">{name}</div>
         </div>
     )
 }
