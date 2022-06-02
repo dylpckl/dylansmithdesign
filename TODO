@@ -9,10 +9,14 @@ Todo:
   ☐ apply light/dark theme to all components
   ☐ refactor app index
   ☐ componentize category tags
-  ☐ change WORK page to not pull from sanity?
+  ☐ refactor work page to be the same as post. use url params?
   ☐ expand home page with featured works
   ☐ shrink card previews?
   ☐ blurry text when rotating (or remove rotation)
+  ☐ blog grid uneven height
   ☐ MOBILE
     ☐ featured project
     ✔ nav @done(22-05-24 11:56)
+  ☐ Refactor
+    ☐ home (index)
+  ☐ fix font links in layout > Head tag
