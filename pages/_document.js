@@ -16,6 +16,8 @@ export default class MyDocument extends Document {
                     src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
                 />
                 <Script
+                    id='gtag-init'
+                    strategy='afterInteractive'
                     dangerouslySetInnerHTML={{
                         __html: `
             window.dataLayer = window.dataLayer || [];
