@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }) {
   const setIsAnimating = useProgressStore((state) => state.setIsAnimating);
   const isAnimating = useProgressStore((state) => state.isAnimating);
   const router = useRouter();
-  
+
   useEffect(() => {
     const handleStart = () => {
       setIsAnimating(true)
@@ -68,10 +68,12 @@ function MyApp({ Component, pageProps }) {
       </Script> */}
       {/* Global Site Tag (gtag.js) - Google Analytics */}
       <Script
+        id='google-analytics'
         strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
       />
       <Script
+        id='gtag-init'
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
