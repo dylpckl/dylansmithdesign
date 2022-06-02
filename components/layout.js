@@ -3,6 +3,7 @@ import Footer from './footer'
 import Head from 'next/head'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
+import Script from 'next/script'
 
 const variants = {
   hidden: { opacity: 0, x: 0, y: 20 },
@@ -28,6 +29,19 @@ export default function Layout({ children }) {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
         <link href="https://fonts.googleapis.com/css2?family=Arya:wght@400;700&family=Josefin+Sans:wght@300;400;700&family=Voces&display=swap" rel="stylesheet" />
+
+{/* 
+        <Script strategy="lazyOnload" src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}></Script>
+        <Script strategy="lazyOnload">
+          {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS});
+          `}
+        </Script> */}
+
       </Head>
       <Navbar />
       <main className='flex flex-col justify-start bg-skin-el-bg-light dark:bg-skin-el-bg-dark text-skin-light dark:text-skin-dark min-h-[80vh] rounded-lg p-8 md:p-16 gap-12 items-center'>

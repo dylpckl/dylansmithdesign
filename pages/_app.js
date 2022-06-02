@@ -5,6 +5,8 @@ import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import { useProgressStore } from '../store'
 import { Progress } from '../components/progress'
+import Head from 'next/head'
+import Script from 'next/script'
 
 function MyApp({ Component, pageProps }) {
   const setIsAnimating = useProgressStore((state) => state.setIsAnimating);
@@ -30,6 +32,29 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
+      {/* <Head>
+        <title>Dylan Smith Design</title>
+        <meta name="description" content="Dylan Smith - Front-End Developer & Designer" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+        <link href="https://fonts.googleapis.com/css2?family=Arya:wght@400;700&family=Josefin+Sans:wght@300;400;700&family=Voces&display=swap" rel="stylesheet" />
+      </Head> */}
+{/* 
+      <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');
+          `}
+      </Script> */}
+
       <Progress isAnimating={isAnimating} />
       <Layout>
         <AnimatePresence
